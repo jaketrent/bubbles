@@ -1,16 +1,21 @@
 /** @jsx jsx */
-import { css, jsx } from '@emotion/react'
+import { Global, jsx } from '@emotion/react'
 
-import { Bubble } from './Bubble'
-import { Header } from './Header'
-import { Layout } from './Layout'
+import * as css from './App.styles.js'
+import { Board } from './Board.jsx'
+import { Bubble } from './Bubble.jsx'
+import { Header } from './Header.jsx'
+import { Layout } from './Layout.jsx'
 
 export default () => (
   <Layout>
-    <Bubble />
-    <Bubble />
+    <Global styles={css.global} />
     <Header />
-    <Bubble />
-    <Bubble />
+    <Board>
+      <Bubble />
+      <Bubble />
+      <Bubble />
+      <Bubble />
+    </Board>
   </Layout>
 )
