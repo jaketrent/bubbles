@@ -1,5 +1,6 @@
 import { css, keyframes } from '@emotion/react'
 
+// WOLOLO
 const float = keyframes`
   0% {
     transform: translateY(0);
@@ -20,6 +21,7 @@ const float = keyframes`
 export const board = css`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
   height: 100vh;
 `
 

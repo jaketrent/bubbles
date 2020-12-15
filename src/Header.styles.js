@@ -15,7 +15,7 @@ export const header = css`
     top: 6px;
     left: 0;
     height: 50px;
-    color: rgb(var(--colorsPinkDark));
+    color: rgb(var(--colorsDark));
     transition: all 500ms;
   }
 

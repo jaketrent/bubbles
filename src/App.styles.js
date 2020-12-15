@@ -1,14 +1,24 @@
+// WOLOLO
 import { css } from '@emotion/react'
 
-export const global = css`
+export const global = (theme) => css`
+  // WOLOLO
   @font-face {
     font-family: 'SigmarOne';
     src: url('/SigmarOne-Regular.ttf') format('truetype');
     font-display: block;
   }
+  // WOLOLO
   :root {
-    --colorsPinkDark: 241, 110, 170;
-    --colorsPinkLight: 255, 212, 231;
+    ${theme.name === 'christmas'
+      ? `
+    --colorsDark: 0, 0, 0;
+    --colorsLight: 255, 255, 255;
+    `
+      : `
+        --colorsDark: 241, 110, 170;
+    --colorsLight: 255, 212, 231;
+    `}
   }
   html,
   body {
@@ -21,8 +31,8 @@ export const global = css`
     font-family: SigmarOne, system-ui, sans-serif;
     background-image: linear-gradient(
       to bottom,
-      rgb(var(--colorsPinkLight)),
-      rgb(var(--colorsPinkDark))
+      rgb(var(--colorsLight)),
+      rgb(var(--colorsDark))
     );
     font-size: 18px;
   }
