@@ -7,6 +7,7 @@ export const header = css`
   transform: translate3d(-50%, -50%, 1px);
   font-size: 6em;
   color: #fff;
+  margin: 0;
 
   &:after {
     content: 'BUBBLES';

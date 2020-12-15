@@ -27,3 +27,19 @@ export const global = css`
     font-size: 18px;
   }
 `
+
+export const bubble1 = css`
+  background: radial-gradient(circle at 70%, yellow, green 75%);
+`
+
+export const bubble2 = css`
+  background: radial-gradient(circle at 70%, blue, purple 75%);
+`
+
+export const bubble3 = css`
+  background: radial-gradient(circle at 70%, red, purple 75%);
+`
+
+export const bubble4 = css`
+  background: radial-gradient(circle at 70%, yellow, orange 75%);
+`
