@@ -21,8 +21,8 @@ export const global = css`
     font-family: SigmarOne, system-ui, sans-serif;
     background-image: linear-gradient(
       to bottom,
-      rgb(255, 255, 255),
-      rgb(var(--colorsPinkLight))
+      rgb(var(--colorsPinkLight)),
+      rgb(var(--colorsPinkDark))
     );
     font-size: 18px;
   }
