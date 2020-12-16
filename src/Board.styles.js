@@ -1,6 +1,6 @@
 import { css, keyframes } from '@emotion/react'
 
-// WOLOLO
+// WOLOLO - 4 - special keyframes template
 const float = keyframes`
   0% {
     transform: translateY(0);

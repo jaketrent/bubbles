@@ -1,4 +1,3 @@
-// WOLOLO
 import { css } from '@emotion/react'
 
 const variables = {
@@ -20,7 +19,6 @@ const variables = {
 }
 
 export const global = (theme) => css`
-  // WOLOLO - page-level directives
   @font-face {
     font-family: SigmarOne;
     src: url(/SigmarOne-Regular.ttf) format('truetype');
@@ -36,7 +34,6 @@ export const global = (theme) => css`
     src: url(/Artegra_Sans-Alt-700-Bold.otf) format('opentype');
     font-display: block;
   }
-  // WOLOLO
   :root {
     ${variables[theme.name]}
   }

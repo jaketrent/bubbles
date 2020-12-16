@@ -12,23 +12,22 @@ import {
   getNextThemeName,
 } from './ThemePicker.jsx'
 
-// TODO: favicon
 export default () => {
   const [themeName, setThemeName] = useState(defaultThemeName)
 
   return (
     <ThemeProvider theme={{ name: themeName }}>
-      {/* WOLOLO */}
+      {/* WOLOLO - 5 - global styles */}
       <Global styles={css.global} />
       <Board>
-        {/* WOLOLO - overrides, composition */}
+        {/* WOLOLO - 6 - overrides, composition */}
         <Bubble />
         <Bubble />
         <Bubble />
         <Bubble />
       </Board>
       <Header />
-      {/* WOLOLO - props for dynamic styles  */}
+      {/* WOLOLO - 7 - props for dynamic styles  */}
       <ThemePicker
         theme={themeName}
         onClick={() => setThemeName(getNextThemeName(themeName))}

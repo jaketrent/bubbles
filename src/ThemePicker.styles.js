@@ -8,7 +8,6 @@ export const picker = (props) => css`
   color: rgb(var(--colorsDark));
   border: 1px solid rgb(var(--colorsDark));
   border-radius: 5px;
-  /* WOLOLO - string interpolation */
   font-size: ${!!props.huge ? '3em' : '1.5em'};
   padding: 0.25em 1em;
   cursor: pointer;
