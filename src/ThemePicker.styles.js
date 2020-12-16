@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 
-export const picker = (props) => css`
+export const picker = css`
   position: absolute;
   top: 1vw;
   right: 1vw;
@@ -8,8 +8,11 @@ export const picker = (props) => css`
   color: rgb(var(--colorsDark));
   border: 1px solid rgb(var(--colorsDark));
   border-radius: 5px;
-  font-size: ${!!props.huge ? '3em' : '1.5em'};
   padding: 0.25em 1em;
   cursor: pointer;
   text-transform: uppercase;
+  font-size: 1em;
+`
+export const pickerHuge = css`
+  font-size: 3em;
 `

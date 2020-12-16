@@ -21,7 +21,7 @@ export default () => {
       <Global styles={css.global} />
       <Board>
         {/* WOLOLO - 6 - overrides, composition */}
-        <Bubble />
+        <Bubble css={[css.color1, css.diamond1]} />
         <Bubble />
         <Bubble />
         <Bubble />
