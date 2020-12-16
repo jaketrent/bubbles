@@ -1,6 +1,21 @@
 // WOLOLO
 import { css } from '@emotion/react'
 
+const variables = {
+  pink: `
+    --colorsDark: 241, 110, 170;
+    --colorsLight: 255, 212, 231;
+  `,
+  mono: `
+    --colorsDark: 0, 0, 0;
+    --colorsLight: 255, 255, 255;
+  `,
+  christmas: `
+    --colorsDark: 196, 0, 81;
+    --colorsLight: 109, 255, 182;
+  `,
+}
+
 export const global = (theme) => css`
   // WOLOLO
   @font-face {
@@ -10,15 +25,7 @@ export const global = (theme) => css`
   }
   // WOLOLO
   :root {
-    ${theme.name === 'christmas'
-      ? `
-    --colorsDark: 0, 0, 0;
-    --colorsLight: 255, 255, 255;
-    `
-      : `
-        --colorsDark: 241, 110, 170;
-    --colorsLight: 255, 212, 231;
-    `}
+    ${variables[theme.name]}
   }
   html,
   body {

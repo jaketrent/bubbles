@@ -6,14 +6,18 @@ import * as css from './App.styles.js'
 import { Board } from './Board.jsx'
 import { Bubble } from './Bubble.jsx'
 import { Header } from './Header.jsx'
-import { ThemePicker } from './ThemePicker.jsx'
+import {
+  ThemePicker,
+  defaultThemeName,
+  getNextThemeName,
+} from './ThemePicker.jsx'
 
-// TODO: fix theme names
+// TODO: favicon
 export default () => {
-  const [theme, setTheme] = useState('pink')
+  const [themeName, setThemeName] = useState(defaultThemeName)
 
   return (
-    <ThemeProvider theme={{ name: theme }}>
+    <ThemeProvider theme={{ name: themeName }}>
       {/* WOLOLO */}
       <Global styles={css.global} />
       <Board>
@@ -26,8 +30,8 @@ export default () => {
       <Header />
       {/* WOLOLO - props for dynamic styles  */}
       <ThemePicker
-        theme={theme}
-        onClick={() => setTheme(theme === 'christmas' ? 'pink' : 'christmas')}
+        theme={themeName}
+        onClick={() => setThemeName(getNextThemeName(themeName))}
       />
     </ThemeProvider>
   )
