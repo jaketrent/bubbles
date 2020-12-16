@@ -3,24 +3,37 @@ import { css } from '@emotion/react'
 
 const variables = {
   pink: `
+    --fontFamily: SigmarOne;
     --colorsDark: 241, 110, 170;
     --colorsLight: 255, 212, 231;
   `,
   mono: `
+    --fontFamily: Artegra;
     --colorsDark: 0, 0, 0;
     --colorsLight: 255, 255, 255;
   `,
   christmas: `
+    --fontFamily: ALVigrand;
     --colorsDark: 196, 0, 81;
     --colorsLight: 109, 255, 182;
   `,
 }
 
 export const global = (theme) => css`
-  // WOLOLO
+  // WOLOLO - page-level directives
   @font-face {
-    font-family: 'SigmarOne';
-    src: url('/SigmarOne-Regular.ttf') format('truetype');
+    font-family: SigmarOne;
+    src: url(/SigmarOne-Regular.ttf) format('truetype');
+    font-display: block;
+  }
+  @font-face {
+    font-family: ALVigrand;
+    src: url(/AL_Vigrand_Bold.ttf) format('truetype');
+    font-display: block;
+  }
+  @font-face {
+    font-family: Artegra;
+    src: url(/Artegra_Sans-Alt-700-Bold.otf) format('opentype');
     font-display: block;
   }
   // WOLOLO
@@ -35,7 +48,7 @@ export const global = (theme) => css`
     overflow: hidden;
   }
   body {
-    font-family: SigmarOne, system-ui, sans-serif;
+    font-family: var(--fontFamily), system-ui, sans-serif;
     background-image: linear-gradient(
       to bottom,
       rgb(var(--colorsLight)),
